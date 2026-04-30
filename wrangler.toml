@@ -1,2 +1,9 @@
 name = "agrov1"
 pages_build_output_dir = "dist/client"
+
+[site]
+bucket = "dist/client"
+exclude = ["wrangler.json"] # Esto le dice a Cloudflare que ignore ese archivo
+
+[compatibility_flags]
+nodejs_compat = true
