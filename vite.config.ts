@@ -7,8 +7,13 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // ... resto de tu config
-  build: {
-    outDir: 'dist/client', // Esto obliga a Vite a ponerlo donde Cloudflare lo busca
-  }
+  vite: {
+    // Usamos la propiedad 'vite' para pasar configuraciones adicionales 
+    // sin romper los plugins pre-instalados de TanStack.
+    build: {
+      // Dejamos que el framework decida la estructura interna, 
+      // pero nos aseguramos de que limpie la carpeta antes de cada build.
+      emptyOutDir: true,
+    },
+  },
 });
