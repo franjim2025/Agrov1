@@ -10,7 +10,7 @@ export default defineConfig({
   vite: {
     base: './',
     build: {
-      outDir: 'dist/client',
+      outDir: 'dist', // Solo 'dist', sin '/client'
       emptyOutDir: true,
     },
   }
