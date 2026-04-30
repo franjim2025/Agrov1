@@ -1,8 +1,0 @@
-name = "agrov1"
-pages_build_output_dir = "dist/client"
-compatibility_date = "2024-04-01"
-
-# Las flags deben ir entre corchetes [] y con comillas
-compatibility_flags = [ "nodejs_compat" ]
-
-# Eliminamos el bloque [site] que causó el Warning anterior
