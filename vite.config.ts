@@ -8,9 +8,12 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
+    base: './',
     build: {
-      // Esto evita que se generen archivos de configuración extra en dist
-      ssr: false 
+      outDir: 'dist',
+      emptyOutDir: true,
+      // Forzamos a que no intente generar nada de servidor
+      ssr: false,
     }
   }
 });
