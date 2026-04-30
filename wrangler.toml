@@ -1,9 +1,8 @@
 name = "agrov1"
 pages_build_output_dir = "dist/client"
+compatibility_date = "2024-04-01"
 
-[site]
-bucket = "dist/client"
-exclude = ["wrangler.json"] # Esto le dice a Cloudflare que ignore ese archivo
+# Las flags deben ir entre corchetes [] y con comillas
+compatibility_flags = [ "nodejs_compat" ]
 
-[compatibility_flags]
-nodejs_compat = true
+# Eliminamos el bloque [site] que causó el Warning anterior
