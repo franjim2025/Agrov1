@@ -10,10 +10,8 @@ export default defineConfig({
   vite: {
     base: './',
     build: {
-      outDir: 'dist',
+      outDir: 'dist/client',
       emptyOutDir: true,
-      // Forzamos a que no intente generar nada de servidor
-      ssr: false,
-    }
+    },
   }
 });
